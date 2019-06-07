@@ -11,12 +11,14 @@ import { SelectingComponent } from './selecting/selecting.component';
 import { NgxTableComponent } from './ngx-table/ngx-table.component';
 import { TablesService } from './tables.service';
 
+import { FormsModule } from '@angular/forms';
+
 export const routes = [
   { path: '', redirectTo: 'basic', pathMatch: 'full'},
   { path: 'basic', component: BasicComponent, data: { breadcrumb: 'Basic table' } },
   { path: 'paging', component: PagingComponent, data: { breadcrumb: 'Paging table' } },
   { path: 'sorting', component: SortingComponent, data: { breadcrumb: 'Sorting table' } },
-  { path: 'filtering', component: FilteringComponent, data: { breadcrumb: 'Filtering table' } },  
+  { path: 'filtering', component: FilteringComponent, data: { breadcrumb: 'Filtering table' } },
   { path: 'selecting', component: SelectingComponent, data: { breadcrumb: 'Selecting table' } },
   { path: 'ngx-table', component: NgxTableComponent, data: { breadcrumb: 'Ngx datatable' } },
 ];
@@ -26,14 +28,15 @@ export const routes = [
     CommonModule,
     RouterModule.forChild(routes),
     NgxDatatableModule,
+    FormsModule,
     SharedModule
   ],
   declarations: [
-    BasicComponent, 
-    PagingComponent, 
-    SortingComponent, 
+    BasicComponent,
+    PagingComponent,
+    SortingComponent,
     FilteringComponent,
-    SelectingComponent, 
+    SelectingComponent,
     NgxTableComponent
   ],
   providers: [
