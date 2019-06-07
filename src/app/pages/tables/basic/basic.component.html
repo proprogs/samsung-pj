@@ -1,18 +1,19 @@
 <div fxLayout="column">
-    <div class="flex-p"> 
-        <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">       
+    <div class="flex-p">
+        <button mat-raised-button color="primary" class="m-1" (click) = "btnClick();">Primary</button>
+        <mat-table #table [dataSource]="dataSource1" class="mat-elevation-z8">
             <ng-container matColumnDef="position">
                 <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-            </ng-container>         
+            </ng-container>
             <ng-container matColumnDef="name">
                 <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-            </ng-container>     
+            </ng-container>
             <ng-container matColumnDef="weight">
                 <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-            </ng-container>        
+            </ng-container>
             <ng-container matColumnDef="symbol">
                 <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
